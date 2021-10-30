@@ -15,7 +15,7 @@ $sql = "SELECT * FROM beautiful_form_sign_up_table WHERE e_mail='$email'";
 $result = mysqli_query($conn, $sql);
 
 if (mysqli_num_rows($result) > 0) {
-	echo "Welcome ".$user_name."!!";
+	header('Location: beautiful_form_password.html');
 }elseif (empty($email)) {
 	echo "Input your Email";
 }else {
